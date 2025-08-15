@@ -102,7 +102,7 @@ body {
 
 #navbar li a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
     color: #59698a;
     transition: 0.3s ease;
@@ -136,7 +136,7 @@ body {
 /* Home Page */
 
 #hero {
-    /* background-image: url("img/hero9.jpeg"); */
+    background-image: url("img/hero2.jpg");
     height: 90vh;
     width: 100%;
     background-size: cover;
