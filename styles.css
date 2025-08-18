@@ -299,7 +299,7 @@ body {
   .titulo-centralizado {
     font-size: 32px;
     margin-bottom: 40px;
-    color: #59698a; /* azul escuro usado no seu site */
+    color: #59698a; 
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
   }
@@ -309,6 +309,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+    padding-bottom: 60px;
   }
   
   .card-servico {
@@ -387,6 +388,7 @@ body {
 
 .footer-left, .footer-right {
   flex: 1 1 300px;
+  margin-left: 150px;
 }
 
 .footer-logo {
@@ -477,12 +479,14 @@ body {
   font-size: 32px;
   margin-bottom: 10px;
   color: #ed862d;
+  font-weight: 700;
 }
 
 .contact-container p {
   font-size: 16px;
   margin-bottom: 30px;
   color: #555;
+  line-height: 1.5;
 }
 
 .contact-section .form-group {
@@ -500,47 +504,61 @@ body {
   max-width: 380px;
   padding: 15px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 16px;
-  resize: none;
   font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
 }
 
-.contact-section select {
-  background-color: #fff;
+/* Foco nos campos */
+.contact-section input:focus,
+.contact-section select:focus,
+.contact-section textarea:focus {
+  border-color: #ed862d;
+  box-shadow: 0 0 5px rgba(237, 134, 45, 0.4);
+  outline: none;
 }
 
 .contact-section button {
   background-color: #ed862d;
   color: white;
-  padding: 14px 28px;
+  padding: 14px 32px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
   font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
 }
 
 .contact-section button:hover {
   background-color: #d2701e;
+  transform: scale(1.05);
 }
 
-.contact-form button {
-  background-color: #ed862d;
-  color: #fff;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+.contact-btn {
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.contact-form button:hover {
-  background-color: #d4721c;
+
+/* Mensagens de feedback */
+.success-message {
+  color: #2e7d32;
+  margin-top: 15px;
+  font-weight: 600;
 }
 
+.error-message {
+  color: #c62828;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+/* Botão WhatsApp fixo */
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
@@ -559,14 +577,15 @@ body {
   transform: scale(1.1);
 }
 
-
+/* Responsividade */
 @media (max-width: 600px) {
   .contact-section .form-group {
     flex-direction: column;
   }
 
   .contact-section input,
-  .contact-section select {
+  .contact-section select,
+  .contact-section textarea {
     max-width: 100%;
   }
 }
