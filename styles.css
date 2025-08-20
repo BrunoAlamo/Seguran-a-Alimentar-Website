@@ -127,6 +127,38 @@ body {
     left: 20px;
 }
 
+#navbar .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* logo abaixo do link */
+  left: 0;
+  background: #fff;
+  min-width: 220px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  z-index: 99;
+  padding-bottom: 8px;
+}
+
+#navbar .dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #59698a;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+#navbar .dropdown-menu li a:hover {
+  background: #ed862d;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Mostra quando passar o mouse */
+#navbar li.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 #mobile {
     display: none;
     align-items: center;
@@ -392,7 +424,7 @@ body {
 }
 
 .footer-logo {
-  max-width: 160px;
+  max-width: 200px;
   margin-bottom: 15px;
 }
 
@@ -592,21 +624,19 @@ body {
 
 /* servicos */
 
-/* responsabilidade tecnica */
-
 .rt-section {
   padding: clamp(48px, 6vw, 80px) 20px;
   background: linear-gradient(180deg, #f9fafc 0%, #fff 100%);
 }
 
 .rt-wrap {
-  max-width: 1180px;
+  max-width: 800px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  display: flex;
   gap: 48px;
   align-items: center;
 }
+
 
 .rt-content h2 {
   font-size: clamp(28px, 3vw, 38px);
@@ -668,6 +698,7 @@ body {
   padding: 22px 24px;
   margin-top: 32px;
   box-shadow: 0 8px 20px rgba(0,0,0,.1);
+  font-family: 'Lato', sans-serif;
 }
 .rt-importance h3 {
   margin-top: 0;
@@ -685,13 +716,27 @@ body {
   font-weight: bold;
 }
 
-/* imagem */
-.rt-media img {
-  width: 100%;
-  border-radius: 18px;
-  box-shadow: 0 12px 26px rgba(0,0,0,.12);
-  object-fit: cover;
+.rt-importance p{
+  color: #fff;
 }
+
+.rt-section button {
+    background-color: #ed862d; /* cor de destaque */
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 6px; /* cantos levemente arredondados */
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    margin-top: 30px;
+    display: block;   /* transforma em bloco */
+    margin: 30px auto 0 auto; /* centraliza horizontalmente */
+}
+
 
 /* responsivo */
 @media (max-width: 980px) {
@@ -701,5 +746,34 @@ body {
   }
   .rt-media { order: -1; }
 }
+
+/* responsabilidade tecnica */
+
+#rt-page-header {
+    background-image: url("img/rtbanner4.png");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+/* consultoria de alimentos */
+
+#ca-page-header {
+    background-image: url("img/cabanner3.png");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
 
 
